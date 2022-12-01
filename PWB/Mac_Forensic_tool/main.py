@@ -1,4 +1,3 @@
-#[0] = main.py
 import sys
 from logging import getLog
 from command_history import print_exCommand
