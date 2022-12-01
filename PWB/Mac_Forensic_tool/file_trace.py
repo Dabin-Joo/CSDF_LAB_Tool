@@ -1,4 +1,4 @@
-#매개변수로 숫자를 받아서 ()일 전까지의 파일 메타 데이터 확인 -> mdls 명령어 사용(Spotlight) -> 미완
+#Check the file metadata up to () days ago -> mdls command(Spotlight)
 import os
 def createTime(date):
     stream = os.popen("mdfind -onlyin $HOME 'kMDItemContentCreationDate>$time.iso("+date+")'")
