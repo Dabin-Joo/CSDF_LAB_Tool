@@ -1,3 +1,4 @@
+#findind bluetooth connecting devices
 import os
 import plistlib
 import time
