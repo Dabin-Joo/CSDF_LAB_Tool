@@ -1,10 +1,9 @@
-#웹브라우저 기록 확인
+#Check the Chrome data
 import sqlite3
 import os
 import time
 
-def checkUrl():  #방문한 url 확인
-    #DB 파일을 인풋으로 받아서 내용을 확인하는 함수
+def checkUrl():  #check the url in chrome history file
     con = sqlite3.connect('chrome_history')
     cursor = con.cursor()
     cursor.execute("SELECT url, title, visit_count, last_visit_time FROM urls")
@@ -17,7 +16,7 @@ def checkUrl():  #방문한 url 확인
             f.write(string+"\n")
     print("Check the file, 'chrome_url.txt'")
 
-def checkDownload(): #다운로드 기록 확인
+def checkDownload(): #check the download history in chrome history file
     con = sqlite3.connect('chrome_history')
     cursor = con.cursor()
     cursor.execute("SELECT target_path, start_time, tab_url FROM downloads")
@@ -39,7 +38,6 @@ def makecopy(history, now):
 
 def extract_Chrome():
     username = input("Input user's name: ")
-    #어떤 웹 브라우저 있는지 확인 -> 폴더명에서 찾기
     now_path = os.getcwd()
     os.chdir("/Users/"+username+"/Library/Application Support/")
     stream = os.popen("ls")
@@ -54,11 +52,11 @@ def extract_Chrome():
     if tp ==0:
         print("There is no Chrome.")
         return
-    #구글 매칭되면 복사본 생성 - 'cp' 명령어 사용
-    makecopy(history_path, now_path) #복사본 생성
+    
+    makecopy(history_path, now_path) #make the copy file
     os.chdir(now_path)
 
-    #url과 download 확인
+    #check url and download history
     checkUrl() 
     checkDownload()
 
