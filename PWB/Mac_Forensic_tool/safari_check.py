@@ -1,13 +1,11 @@
-#웹브라우저 기록 확인
+#Check Safari history
 import sqlite3
 import os
 import time
 import plistlib
 
 def makecopy(history, now, web):
-    #print(history)
     os.chdir(history)
-    #print(now)
     com = "cp History.db "+now+"/"+web+"_history.db"
     os.popen(com)
     time.sleep(3)
@@ -15,13 +13,13 @@ def makecopy(history, now, web):
     os.popen(com)
     time.sleep(3)
 
-def checkDownload(): #다운로드 기록 확인
+def checkDownload(): #Check the Safari Download history
     plist_name = "Safari_download.plist"
     checklist = ['DownloadEntryProgressTotalToLoad', 'DownloadEntryDateAddedKey', 'DownloadEntryDateFinishedKey', 'DownloadEntryURL', 'DownloadEntryPath']
-    #DownloadEntryProgressTotalToLoad = 다운로드 바이트 크기
-    #DownloadEntryDateAddedKey = 다운로드 시작 시간(datetime)/DownloadEntryDateFinishedKey = 다운로드 끝난 시간
-    #DownloadEntryURL = 다운로드 url
-    #DownloadEntryPath = 다운로드 받은 파일 위치
+    #DownloadEntryProgressTotalToLoad = File's byte size 
+    #DownloadEntryDateAddedKey = Download start time (datetime)/DownloadEntryDateFinishedKey = Download finish time
+    #DownloadEntryURL = Download url
+    #DownloadEntryPath = Path to downloaded file
     
     with open(plist_name, 'rb') as f:
         plist_data = plistlib.load(f)
@@ -36,7 +34,7 @@ def checkDownload(): #다운로드 기록 확인
             f.write(string+"\n")
     print("Check the file, 'Safari_download.txt'")
     
-def checkUrl():  #방문한 url 확인
+def checkUrl():  #check the visited url
     db_name = "Safari_history.db"
     con = sqlite3.connect(db_name)
     cursor = con.cursor()
@@ -50,16 +48,16 @@ def checkUrl():  #방문한 url 확인
             f.write(string+"\n")
     print("Check the file, 'Safari_url.txt'")
 
-def checkWeb(name): # 웹사이트 있는지 확인 -> 사파리나 파이어폭스는 바로 확인 But 구글은 임포트 함수로 이동
+def checkWeb(name): #check the safari
     lib_path = "/Users/"+name+"/Library"
     now_path = os.getcwd()
     os.chdir(lib_path)
     stream = os.popen("ls")
     webbrowser = ["Safari", "Firefox"]
-    folder_name = stream.readlines() # safari 등 확인
-    for i in folder_name: #폴더이름에서 웹브라우저 목록과 비교
+    folder_name = stream.readlines()
+    for i in folder_name: 
         if "Safari\n" in i:
-            print("Safari matched!") #매칭됨
+            print("Safari matched!")
             history = lib_path+"/Safari"
             makecopy(history, now_path, "Safari")
             os.chdir(now_path)
@@ -70,6 +68,5 @@ def checkWeb(name): # 웹사이트 있는지 확인 -> 사파리나 파이어폭
 
 
 def extract_Safari():
-    #어떤 웹 브라우저 있는지 확인 -> 폴더명에서 찾기
     username = input("Input user's name: ")
     checkWeb(username)
