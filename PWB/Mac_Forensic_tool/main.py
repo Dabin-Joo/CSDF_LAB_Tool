@@ -1,4 +1,3 @@
-#main문으로 매개변수에 따라서 각 py파일로 연결하는 코드
 #[0] = main.py
 import sys
 from logging import getLog
