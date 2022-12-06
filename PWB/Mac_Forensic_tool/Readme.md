@@ -6,7 +6,6 @@ This is the tool that can collect data that is helpful for MacOS forensics.
 ## Requirement
 OS : MacOS\
 Langauage : Python 3.7 or above version\
-There is no need to install other libraries.(we use only Python standard library)
 
 ## install
 Download all python files and place all files in one directory
@@ -24,8 +23,9 @@ The details are in the 'How to use'
 ```c
 This is the MacOS forensic tool.
 We can collect some artifacts of Mac without password.
-if you want to see the explanation of the arguments, you can use "-h" argument.
-< Arguments >
+if you want to see the explanation of the parameters, you can use "-h".
+
+< Parameters >
  -b : Bluetooth connecting devices
  -c : command history
  -f : file metadata trace(creation, modification, last use)
