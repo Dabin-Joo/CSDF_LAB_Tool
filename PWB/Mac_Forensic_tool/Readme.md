@@ -36,7 +36,7 @@ if you want to see the explanation of the parameters, you can use "-h".
  -wc : web browser[Chrome]
 ```
 - -b : Bluetooth connecting devices\
-
+<img width ="80%" scr ="https://user-images.githubusercontent.com/119034536/205902735-e7abc638-e58e-47bd-b250-ab0bdfc8fa60.png"/>
 - -c : terminal instructions history\
  
 - -f : metadata search(creation, modification, last use time)\
