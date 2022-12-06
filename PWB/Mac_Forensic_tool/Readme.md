@@ -17,7 +17,7 @@ python main.py <parameters>
 ```
 You can use the parameters like '-h','-b','-c', etc.\
 The details are in the 'How to use'
-- [How to use](https://github.com/CSDF-LAB/tool/edit/main/PWB/Mac_Forensic_tool/Readme.md#how-to-use)
+- [How to use](https://github.com/CSDF-LAB/tool/main/PWB/Mac_Forensic_tool/Readme.md#how-to-use)
 
 ## How to use
 - -h : explain tool and it's arguments\
