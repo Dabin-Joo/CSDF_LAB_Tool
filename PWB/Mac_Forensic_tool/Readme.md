@@ -8,10 +8,8 @@ OS : MacOS\
 Langauage : Python 3.7 or above version\
 There is no need to install other libraries.(we use only Python standard library)
 
-## Git
-```c
-git clone 
-```
+## install
+Download all python files and place all files in one directory
 
 ## Run
 ```c
