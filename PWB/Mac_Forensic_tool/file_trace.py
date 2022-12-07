@@ -23,7 +23,8 @@ def metadata_trace():
     <menu>
     1. Created Time
     2. Modified Time
-    3. Last Use Time"""
+    3. Last Use Time
+    """
     print(menu)
     num = int(input("Type the number of menu which you want to know. : "))
     if num == 1:
