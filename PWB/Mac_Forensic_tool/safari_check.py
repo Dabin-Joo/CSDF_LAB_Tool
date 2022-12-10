@@ -55,16 +55,18 @@ def checkWeb(name): #check the safari
     stream = os.popen("ls")
     webbrowser = ["Safari", "Firefox"]
     folder_name = stream.readlines()
+    safari = False
     for i in folder_name: 
         if "Safari\n" in i:
-            print("Safari matched!")
+            print("Safari matched!") 
             history = lib_path+"/Safari"
             makecopy(history, now_path, "Safari")
             os.chdir(now_path)
             checkUrl()
             checkDownload()
-        else:
-            print("There is no Safari folder")
+            safari = True
+    if not safari:
+        print("There is no Safari folder")
 
 
 def extract_Safari():
