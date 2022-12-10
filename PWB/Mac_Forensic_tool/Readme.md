@@ -35,7 +35,7 @@ if you want to see the explanation of the parameters, you can use "-h".
  -ws : web browser[Safari]
  -wc : web browser[Chrome]
 ```
-* -b : Bluetooth connecting devices
+* -b : Bluetooth connecting devices(com.apple.bluetooth.plist)
   * No other input needed
   * output : bluetooth_log.plist, bluetooth_log.txt
   * This function is to extract the original file(/Library/Preferences/com.apple.bluetooth.plist) and store the neccessary content in .txt file.
@@ -48,7 +48,7 @@ if you want to see the explanation of the parameters, you can use "-h".
     * 10.15 or higher : zsh
 * -f : metadata search(creation, modification, last use time)\
   <img src = "https://user-images.githubusercontent.com/119034536/206067802-58e102cc-8905-4809-ac81-36cb67b81b54.png"/>
-  * input : days(only number)
+  * input : day(format: yyyy-mm-dd)
   * output : searching result on shell
 
 * -p : show installed programs’ name
