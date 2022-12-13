@@ -1,7 +1,11 @@
 import sqlite3
+import os
+
+# Get OS USERNAME
+username = os.environ.get("USERNAME")
 
 # DB 생성 & Auto Commit
-make_DB = sqlite3.connect('C:/Users/WON/Desktop/[1212]DQTparser/DB.db', isolation_level=None)
+make_DB = sqlite3.connect('C:/Users/{}/Desktop/Meta_DB.db'.format(username), isolation_level=None)
 
 # Cursor
 data = make_DB.cursor()
