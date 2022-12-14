@@ -24,6 +24,6 @@ Content: chat history or title of shared file
 
 Caution
 -----
-*chathistory.py unzip all the zip files in the same directory. Please run it in a directory where it does not include other zip files.   
-*The JANDI application should be terminated before run chathistory.py
+* chathistory.py unzip all the zip files in the same directory. Please run it in a directory where it does not include other zip files.   
+* The JANDI application should be terminated before run chathistory.py
 
