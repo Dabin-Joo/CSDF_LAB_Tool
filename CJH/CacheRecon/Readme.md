@@ -27,5 +27,23 @@
 
 
 ## data_1.py
++ through data that was recieved from data 0
+
++ data1.py indicates alll of the offset and gather all the datas of the cache files
+
+> - URL_size
+> - Meta data_size
+> - Data_size
+> - Metadata_location
+> - MDF_Number(Number of data_# for metadata)
+> - Data_location
+> - DF_Number(Number of data_# for data)
+> - Data_F(f_######)
+> - Data type
 
 ## Reconstruct.py
+If the cache files were recieved successfully reconstruction could be proceeded
+
+Choosing by the URL Short info
+
+gathering all of the related sources and reconstructing video can be done.
