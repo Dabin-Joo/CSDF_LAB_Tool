@@ -108,10 +108,13 @@ async function getTransactionByAccount (){
     const blockinfo = await web3.eth.getBlock(i);
     const transactionsList = blockinfo.transactions;
     transactionsList.forEach(async (item) => {
-      const txInfo = await web3.eth.getTransaction(item);
+      txInfo = await web3.eth.getTransaction(item);
+      methodId = web3.eth.abi.encodeFunctionSignature(func);
       if (txInfo.to == account || txInfo.from == account){
-        res.push(txInfo.hash);
-      }
+        if (txInfo.input.includes(methodID)){
+          res.push(txInfo.hash);
+        };
+      };
       console.log(txInfo.input);
     });
   }
@@ -121,8 +124,3 @@ async function getTransactionByAccount (){
   return res;
         
 }
-
-function getMethod(){
-  var methodId = web3.eth.abi.encodeFunctionSignature("함수명(매개변수타입)"); // Function DB에서 함수명이랑 매개변수 자료형 받기
-  // return으로 methodID 받고 이 methodID가 transaction 내에 존재하는 코드 짜기
-};
