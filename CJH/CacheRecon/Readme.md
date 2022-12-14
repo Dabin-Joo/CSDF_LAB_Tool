@@ -13,16 +13,16 @@
  + Third Byte = Where the data is stored at(01 →data_1, 02 → data_2, 03 → data_3)
 
  + If the last Byte is 80 it means that the data is stored in f_###### way
-
-+ data0.py analyze the metadata of data 0 and uses calculate_offest.py to indicate the exact offset of the data
- > calculat_offset.py
- > **data1**
+ 
+ + data0.py analyze the metadata of data 0 and uses calculate_offest.py to indicate the exact offset of the data
+ + calculat_offset.py
+ > data1
  >>  + first 2 bytes x 0x100(block size)  +8192(0x2000)
  *****
  > data2
- > first 2 bytes x 0x400(block size) +8192(0x2000)
- > ***data3***
- > first 2 bytes x 0x1000(block size) +8192(0x2000)
+ > >first 2 bytes x 0x400(block size) +8192(0x2000)
+ > *data3*
+ > >first 2 bytes x 0x1000(block size) +8192(0x2000)
 
 
 **data_1.py**
