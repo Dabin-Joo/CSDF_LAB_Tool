@@ -1,0 +1,12 @@
+os
+requests
+urllib.parse import urlparse
+zipfile
+win32api
+shutil
+glob
+jsontocsv
+re
+csv
+json
+pandas
