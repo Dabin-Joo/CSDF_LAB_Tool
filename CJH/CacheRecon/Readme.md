@@ -15,8 +15,8 @@
  + If the last Byte is 80 it means that the data is stored in f_###### way
 
 + data0.py analyze the metadata of data 0 and uses calculate_offest.py to indicate the exact offset of the data
- >** calculat_offset.py**
- > *** data1 ***
+ > calculat_offset.py
+ > **data1**
  >>  + first 2 bytes x 0x100(block size)  +8192(0x2000)
  *****
  > data2
