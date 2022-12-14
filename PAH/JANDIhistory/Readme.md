@@ -4,7 +4,7 @@ JANDIhistory is a tool to extract chat history from JANDI application's cache fi
 
 Requirement
 ---------------
-OS: Windows 10, 11
+OS: Windows 10, 11//
 Language: Python 3.7 or above
 JANDI application which is installed on PC
 
